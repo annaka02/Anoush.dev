@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr" id="html">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Anna Ka</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+ 
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans transition-colors duration-300" id="body">
+
+<canvas id="bubbleCanvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+
+<div id="particles-js"></div>
+
+<nav class="bg-white dark:bg-gray-900 shadow-md py-4 transition-colors duration-300 relative z-10">
+  <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+    
+    <div class="text-2xl font-bold text-gray-800 dark:text-white">
+      <span class="text-blue-600">&lt;\&gt;</span>
+      <span>Anoush</span><span class="text-blue-600">.Dev</span>
+    </div>
+
+    <div class="space-x-6 text-gray-700 dark:text-gray-300 font-medium flex items-center">
+      <a href="#accueil" class="hover:text-blue-600 dark:hover:text-yellow-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9M4 10v10h6v-6h4v6h6V10" />
+        </svg>Accueil
+      </a>
+
+      <a href="#apropos" class="hover:text-blue-600 dark:hover:text-yellow-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A7 7 0 0112 15a7 7 0 016.879 2.804M15 10a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>À propos
+      </a>
+
+      <a href="#projets" class="hover:text-blue-600 dark:hover:text-yellow-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m2 8H7a2 2 0 01-2-2V8a2 2 0 012-2h2l1-2h4l1 2h2a2 2 0 012 2v10a2 2 0 01-2 2z" />
+        </svg>Projets
+      </a>
+
+      <a href="#blog" class="hover:text-blue-600 dark:hover:text-yellow-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16h8M8 12h8m-6 8h4a2 2 0 002-2V8.828a2 2 0 00-.586-1.414l-3.828-3.828A2 2 0 0012.172 3H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+        </svg>Blog
+      </a>
+
+      <button onclick="toggleTheme()" id="themeToggle" class="ml-4 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" id="sunIcon" class="w-6 h-6 hidden text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M6.05 17.95l-1.414 1.414m0-13.414l1.414 1.414M17.95 17.95l1.414 1.414M12 8a4 4 0 100 8 4 4 0 000-8z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" id="moonIcon" class="w-6 h-6 text-gray-700 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<section class="flex flex-col items-center justify-center min-h-[60vh] text-center px-4">
+  <!-- Logo animé -->
+  <h1 class="text-5xl md:text-7xl font-extrabold text-blue-600 mb-6 animate-float">
+    <span>&lt;\&gt;</span><span>Anoush</span><span>.dev</span>
+  </h1>
+
+  <p class="max-w-xl text-gray-700 dark:text-gray-300 text-lg md:text-xl">
+    Cybersecurity Student and Web Developer
+  </p>
+</section>
+
+<section id="apropos" class="max-w-6xl mx-auto px-6 py-12">
+  <!-- Partie 1 : À propos de moi -->
+  <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-16">
+    <!-- Texte -->
+    <div class="md:w-2/3 text-gray-800 dark:text-gray-200">
+      <h2 class="text-3xl font-bold mb-4 text-blue-600 text-center">À propos de moi</h2>
+      <p class="text-lg leading-relaxed">
+        Je suis Anna Ka, passionnée par la cybersécurité et les technologies de l'information.  
+        Après une licence en cybersécurité, j'ai décidé de poursuivre mes études en Master tout en développant mes compétences pratiques à travers divers projets.  
+        Ma motivation principale est d’apporter des solutions innovantes pour protéger les données et les systèmes dans un monde de plus en plus connecté.
+      </p>
+    </div>
+    <!-- Photo -->
+    <div class="md:w-1/3">
+      <img src="WhatsApp Image 2025-05-19 at 21.58.32.jpeg" alt="Photo de Anna Ka" class="rounded-lg shadow-lg object-cover w-full h-auto max-h-64 mx-auto" />
+    </div>
+  </div>
+
+  <!-- Partie 2 : Mes compétences -->
+ <div class="mb-16">
+  <h2 class="text-3xl font-bold mb-6 text-blue-600 text-center">Mes compétences</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+    <!-- Front End -->
+    <div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 cursor-pointer">
+      <h3 class="text-xl font-semibold mb-4 flex items-center gap-2 text-blue-600 justify-center">
+        <!-- Icône Frontend -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+        </svg> Front End
+      </h3>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>React / Angular</li>
+        <li>Tailwind / Bootstrap</li>
+      </ul>
+    </div>
+
+    <!-- Back End -->
+    <div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 cursor-pointer">
+      <h3 class="text-xl font-semibold mb-4 flex items-center gap-2 text-blue-600 justify-center">
+        <!-- Icône Backend -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v4H4V4zm0 6h16v4H4v-4zm0 6h16v4H4v-4z" />
+        </svg> Back End
+      </h3>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>Python (Flask, Django)</li>
+        <li>Java (Spring)</li>
+      </ul>
+    </div>
+
+    <!-- Database -->
+    <div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 cursor-pointer">
+      <h3 class="text-xl font-semibold mb-4 flex items-center gap-2 text-blue-600 justify-center">
+        <!-- Icône Database -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3C7.582 3 4 4.79 4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7c0-2.21-3.582-4-8-4z" />
+        </svg> Database
+      </h3>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+        <li>MySQL</li>
+        <li>PostgreSQL</li>
+        <li>MongoDB</li>
+      </ul>
+    </div>
+
+    <!-- Security -->
+    <div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 cursor-pointer">
+      <h3 class="text-xl font-semibold mb-4 flex items-center gap-2 text-blue-600 justify-center">
+        <!-- Icône Sécurité -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg> Security
+      </h3>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+        <li>Audit de sécurité</li>
+        <li>Tests d'intrusion</li>
+        <li>Cryptographie</li>
+        <li>Gestion des vulnérabilités</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+</section> 
+<footer class="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-8 mt-12 transition-colors duration-300">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    
+    <div class="flex flex-col items-start">
+      <div class="text-3xl font-bold text-gray-800 dark:text-white mb-2">
+        <span class="text-blue-600">&lt;\&gt;</span><span>anoush</span><span class="text-blue-600">.dev</span>
+      </div>
+      <p class="text-sm">© 2025 Anna Ka. Tous droits réservés.</p>
+    </div>
+
+    
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Navigation</h3>
+      <ul class="space-y-2">
+        <li><a href="#accueil" class="hover:text-blue-600 dark:hover:text-yellow-400">Accueil</a></li>
+        <li><a href="#apropos" class="hover:text-blue-600 dark:hover:text-yellow-400">À propos</a></li>
+        <li><a href="#projets" class="hover:text-blue-600 dark:hover:text-yellow-400">Projets</a></li>
+        <li><a href="#blog" class="hover:text-blue-600 dark:hover:text-yellow-400">Blog</a></li>
+      </ul>
+    </div>
+
+    
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Contact</h3>
+      <p>Email : <a href="mailto:contact@anoush.dev" class="hover:text-blue-600 dark:hover:text-yellow-400">annakasy24@gmail.com</a></p>
+      <p>Téléphone : <a href="tel:+221000000000" class="hover:text-blue-600 dark:hover:text-yellow-400">+221 78 203 49 40</a></p>
+      <p>Adresse : Dakar, Sénégal</p>
+    </div>
+
+  </div>
+</footer>
+<script src="script.js"></script> 
+</body> 
+</html>
