@@ -48,10 +48,10 @@
         </svg>Projets
       </a>
 
-      <a href="#blog" class="hover:text-blue-600 dark:hover:text-yellow-400">
+      <a href="#certifications" class="hover:text-blue-600 dark:hover:text-yellow-400">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16h8M8 12h8m-6 8h4a2 2 0 002-2V8.828a2 2 0 00-.586-1.414l-3.828-3.828A2 2 0 0012.172 3H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-        </svg>Blog
+        </svg>Certifications
       </a>
 
       <button onclick="toggleTheme()" id="themeToggle" class="ml-4 focus:outline-none">
@@ -166,8 +166,108 @@
 
   </div>
 </div>
+<!--Sectien projets-->
+<section id="projets" class="bg-white dark:bg-gray-900 py-16">
+  <div class="container px-6 mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-blue-600 dark:text-white">Mes projets</h2>
+      <p class="text-gray-500 dark:text-gray-400 mt-2">Voici quelques projets sur lesquels j’ai travaillé</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Projet Java / Spring Boot -->
+      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition duration-300">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">WeCare</h3>
+        <p class="text-gray-600 dark:text-gray-400 mt-2">Une application backend en rapport avec la santé, développée avec Spring Boot.</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-3 py-1 rounded">Java</span>
+          <span class="text-sm bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-3 py-1 rounded">Spring Boot</span>
+          <span class="text-sm bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-3 py-1 rounded">JWT</span>
+        </div>
+        <a href="https://github.com/annaka02/WeCare" target="_blank" class="mt-4 block text-blue-500 hover:underline">Voir sur GitHub</a>
+      </div>
+
+      <!-- Projet Angular -->
+      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition duration-300">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">CRUD Angular</h3>
+        <p class="text-gray-600 dark:text-gray-400 mt-2">Application CRUD simple avec Angular et Angular Material UI.</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-sm bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 px-3 py-1 rounded">Angular</span>
+          <span class="text-sm bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-3 py-1 rounded">HTML</span>
+          <span class="text-sm bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded">Material UI</span>
+        </div>
+        <a href="https://github.com/annaka02/Angular13CRUD-AngularMaterialUI" target="_blank" class="mt-4 block text-blue-500 hover:underline">Voir sur GitHub</a>
+      </div>
+
+      <!-- Projet React -->
+      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition duration-300">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">React Movie App</h3>
+        <p class="text-gray-600 dark:text-gray-400 mt-2">Une application de films développée avec React et Vite.</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-sm bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-200 px-3 py-1 rounded">React</span>
+          <span class="text-sm bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200 px-3 py-1 rounded">Vite</span>
+        </div>
+        <a href="https://github.com/annaka02/React-Movie-App/tree/main/frontend" target="_blank" class="mt-4 block text-blue-500 hover:underline">Voir sur GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 </section> 
+<!--Sectien Certifications-->
+<section id="certifications" class="bg-gray-100 dark:bg-gray-900 py-16">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">Mes Certifications</h2>
+    <p class="text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">Voici un aperçu de mes certifications en cybersécurité, réseau et analyse de menaces, obtenues via Cisco et TryHackMe.</p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- TryHackMe Junior Pentester -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKHtM92LCGbiraTK95mreVxDmRS4iaHuc6dA&s" alt="TryHackMe Logo" class="h-10 mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Junior Penetration Tester</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">TryHackMe - Juillet 2023</p>
+        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-HDV6FHJXCD.pdf" target="_blank" class="text-blue-500 hover:underline text-sm">Voir certificat</a>
+      </div>
+
+      <!-- Cisco Certified Ethical Hacker -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png" alt="Cisco Logo" class="h-10 mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Certified Ethical Hacker</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Cisco Networking Academy - Juin 2024</p>
+        <a href="#" class="text-blue-500 hover:underline text-sm">Voir certificat</a>
+      </div>
+
+      <!-- Cisco Network Support and Security -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png" alt="Cisco Logo" class="h-10 mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Network Support and Security</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Cisco Networking Academy - Juin 2024</p>
+        <a href="#" class="text-blue-500 hover:underline text-sm">Voir certificat</a>
+      </div>
+
+      <!-- Cisco Cyber Threat Management -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png" alt="Cisco Logo" class="h-10 mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Cyber Threat Management</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Cisco Networking Academy - Juin 2024</p>
+        <a href="#" class="text-blue-500 hover:underline text-sm">Voir certificat</a>
+      </div>
+
+      <!-- Cisco Introduction to Cybersecurity -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png" alt="Cisco Logo" class="h-10 mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Introduction to Cybersecurity</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Cisco Networking Academy - Septembre 2021</p>
+        <a href="#" class="text-blue-500 hover:underline text-sm">Voir certificat</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
 <footer class="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-8 mt-12 transition-colors duration-300">
   <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
 
@@ -186,7 +286,7 @@
         <li><a href="#accueil" class="hover:text-blue-600 dark:hover:text-yellow-400">Accueil</a></li>
         <li><a href="#apropos" class="hover:text-blue-600 dark:hover:text-yellow-400">À propos</a></li>
         <li><a href="#projets" class="hover:text-blue-600 dark:hover:text-yellow-400">Projets</a></li>
-        <li><a href="#blog" class="hover:text-blue-600 dark:hover:text-yellow-400">Blog</a></li>
+        <li><a href="#blog" class="hover:text-blue-600 dark:hover:text-yellow-400">Certifications</a></li>
       </ul>
     </div>
 
