@@ -10,7 +10,7 @@ body {
   top: 0;
   left: 0;
   transition: background-color 0.3s ease;
-  background-color: #f3f4f6; /* gris clair par défaut (mode clair) */
+  background-color: #d9b3cc; /* gris clair par défaut (mode clair) */
 }
 
 .dark #particles-js {
